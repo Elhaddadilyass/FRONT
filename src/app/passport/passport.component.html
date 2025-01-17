@@ -1,0 +1,52 @@
+<div class="info-container">
+  <h2>Passport Information</h2>
+
+  <!-- Identity Information List -->
+  <div class="info-list">
+    <div class="info-item">
+      <label for="passport-number">Passport Number:</label>
+      <input id="passport-number" type="text" [value]="identity.Passport_Number" [readonly]="!canModify" />
+    </div>
+    <div class="info-item">
+      <label for="last-name">Nom:</label>
+      <input id="last-name" type="text" [value]="identity.Nom" [readonly]="!canModify" />
+    </div>
+    <div class="info-item">
+      <label for="first-name">Prenom:</label>
+      <input id="first-name" type="text" [value]="identity.Prenom" [readonly]="!canModify" />
+    </div>
+    <div class="info-item">
+      <label for="nationality">Nationalite:</label>
+      <input id="nationality" type="text" [value]="identity.Nationalite" [readonly]="!canModify" />
+    </div>
+    <div class="info-item">
+      <label for="dob">Date de Naissance:</label>
+      <input id="dob" type="date" [value]="identity.dateNaissance" [readonly]="!canModify" />
+    </div>
+    <div class="info-item">
+      <label for="birth-place">Lieu de Naissance:</label>
+      <input id="birth-place" type="text" [value]="identity.LieuNaissance" [readonly]="!canModify" />
+    </div>
+    <div class="info-item">
+      <label for="issue-date">Date de Délivrance:</label>
+      <input id="issue-date" type="date" [value]="identity.dateDeDeliverance" [readonly]="!canModify" />
+    </div>
+    <div class="info-item">
+      <label for="exp-date">Date d'Expiration:</label>
+      <input id="exp-date" type="date" [value]="identity.dateExpiration" [readonly]="!canModify" />
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="buttons">
+    <button (click)="validate()" class="validate-btn">
+      <i class="fas fa-check-circle"></i> Validate
+    </button>
+    <button (click)="toggleModify()" class="modify-btn">
+      {{ canModify ? 'OK' : 'Modify' }}
+    </button>
+  </div>
+
+  <!-- Back Button -->
+  <button (click)="goBack()" class="back-btn">Back</button>
+</div>

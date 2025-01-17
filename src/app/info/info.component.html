@@ -1,0 +1,44 @@
+<div class="info-container">
+  <h2>Moroccan Identity Information</h2>
+
+  <!-- Identity Information List -->
+  <div class="info-list">
+    <div class="info-item">
+      <label for="last-name">Nom:</label>
+      <input id="last-name" type="text" [value]="identity.lastName" [readonly]="!canModify" />
+    </div>
+    <div class="info-item">
+      <label for="first-name">Prenom:</label>
+      <input id="first-name" type="text" [value]="identity.firstName" [readonly]="!canModify" />
+    </div>
+    <div class="info-item">
+      <label for="cin">CIN:</label>
+      <input id="cin" type="text" [value]="identity.cin" [readonly]="!canModify" />
+    </div>
+    <div class="info-item">
+      <label for="exp-date">Date de Fin de Carte Nationale:</label>
+      <input id="exp-date" type="date" [value]="identity.expirationDate" [readonly]="!canModify" />
+    </div>
+    <div class="info-item">
+      <label for="address">Adresse:</label>
+      <input id="address" type="text" [value]="identity.address" [readonly]="!canModify" />
+    </div>
+    <div class="info-item">
+      <label for="dob">Date de Naissance:</label>
+      <input id="dob" type="date" [value]="identity.dob" [readonly]="!canModify" />
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="buttons">
+    <button (click)="validate()" class="validate-btn">
+      <i class="fas fa-check-circle"></i> Validate
+    </button>
+    <button (click)="toggleModify()" class="modify-btn">
+      {{ canModify ? 'OK' : 'Modify' }}
+    </button>
+  </div>
+
+  <!-- Back Button -->
+  <button (click)="goBack()" class="back-btn">Back</button>
+</div>

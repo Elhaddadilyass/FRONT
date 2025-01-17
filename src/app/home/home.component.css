@@ -1,0 +1,113 @@
+/* Container for the entire file upload section */
+.file-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 500px;
+  padding: 30px;
+  border: 2px solid #e1e1e1;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.file-upload-container:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Browse button styling */
+.browse-button {
+  padding: 15px 30px;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.browse-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+
+/* General button styling */
+button {
+  padding: 15px 30px;
+  margin: 15px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 300px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+  transform: none;
+}
+
+button:disabled:hover {
+  background-color: #ddd;
+}
+
+/* Success message styling */
+.success-message {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #28a745;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.success-message .icon-check {
+  width: 60px;
+  height: 60px;
+  font-size: 3rem;
+  border-radius: 50%;
+  background-color: #28a745;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.success-message p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* Fade-in animation for success message */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
