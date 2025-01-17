@@ -1,12 +1,15 @@
+// src/app/app.component.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';  // Import RouterModule
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,  // Make AppComponent standalone
+  imports: [RouterModule]  // Import RouterModule so that router-outlet is recognized
 })
 export class AppComponent {
   title = 'FRONT';
+  message = 'Welcome to the Angular app!';  // Example message
 }

@@ -1,5 +1,6 @@
+// src/main.ts
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
+import { appConfig } from './app/app.config'; // Configuration for routing
 import { AppComponent } from './app/app.component';
 
 bootstrapApplication(AppComponent, appConfig)
