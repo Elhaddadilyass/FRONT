@@ -8,6 +8,8 @@ import { routes } from './app.routes';
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';  // Import InfoComponent
 import { PassportComponent} from './passport/passport.component';
+import {FormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,11 +18,14 @@ import { PassportComponent} from './passport/passport.component';
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes), // Add RouterModule to imports for routing
-    HomeComponent,  // Add HomeComponent here
+    HomeComponent,
+    FormsModule,// Add HomeComponent here
     InfoComponent,
     PassportComponent,// Add InfoComponent here
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent] // AppComponent remains the bootstrap component
 })
 export class AppModule {}

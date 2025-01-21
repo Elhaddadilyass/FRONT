@@ -9,9 +9,15 @@
   <p *ngIf="selectedFile">Selected File: {{ selectedFile.name }}</p>
 
   <!-- Buttons -->
-  <button (click)="goToNext()" [disabled]="!selectedFile">Moroccan</button>
+  <button (click)="goToNext()" [disabled]="!selectedFile">Moroccan IDCard</button>
   <button (click)="goToPassport()" [disabled]="!selectedFile">Passport</button>
   <button (click)="deleteFile()" [disabled]="!selectedFile">Delete</button>
+
+  <!-- Loading animation -->
+  <div class="loading-spinner" *ngIf="isLoading">
+    <div class="spinner"></div>
+    <p>Processing OCR, please wait...</p>
+  </div>
 
   <!-- Display success message and Continue button -->
   <div *ngIf="successMessage">

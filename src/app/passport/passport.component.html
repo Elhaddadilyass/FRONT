@@ -1,52 +1,49 @@
-<div class="info-container">
+<div class="passport-container">
   <h2>Passport Information</h2>
 
-  <!-- Identity Information List -->
   <div class="info-list">
     <div class="info-item">
       <label for="passport-number">Passport Number:</label>
-      <input id="passport-number" type="text" [value]="identity.Passport_Number" [readonly]="!canModify" />
+      <input id="passport-number" type="text" [(ngModel)]="identity.passportNumber" [readonly]="!canModify" />
     </div>
     <div class="info-item">
       <label for="last-name">Nom:</label>
-      <input id="last-name" type="text" [value]="identity.Nom" [readonly]="!canModify" />
+      <input id="last-name" type="text" [(ngModel)]="identity.nom" [readonly]="!canModify" />
     </div>
     <div class="info-item">
-      <label for="first-name">Prenom:</label>
-      <input id="first-name" type="text" [value]="identity.Prenom" [readonly]="!canModify" />
+      <label for="first-name">Prénom:</label>
+      <input id="first-name" type="text" [(ngModel)]="identity.prenom" [readonly]="!canModify" />
     </div>
     <div class="info-item">
-      <label for="nationality">Nationalite:</label>
-      <input id="nationality" type="text" [value]="identity.Nationalite" [readonly]="!canModify" />
+      <label for="nationality">Nationalité:</label>
+      <input id="nationality" type="text" [(ngModel)]="identity.nationalite" [readonly]="!canModify" />
     </div>
     <div class="info-item">
-      <label for="dob">Date de Naissance:</label>
-      <input id="dob" type="date" [value]="identity.dateNaissance" [readonly]="!canModify" />
+      <label for="birth-date">Date de Naissance:</label>
+      <input id="birth-date" type="text" [(ngModel)]="identity.dateNaissance" [readonly]="!canModify" />
     </div>
     <div class="info-item">
-      <label for="birth-place">Lieu de Naissance:</label>
-      <input id="birth-place" type="text" [value]="identity.LieuNaissance" [readonly]="!canModify" />
+      <label for="issue-date">Date de Deliverance:</label>
+      <input id="issue-date" type="text" [(ngModel)]="identity.dateDeDeliverance" [readonly]="!canModify" />
     </div>
     <div class="info-item">
-      <label for="issue-date">Date de Délivrance:</label>
-      <input id="issue-date" type="date" [value]="identity.dateDeDeliverance" [readonly]="!canModify" />
+      <label for="expiry-date">Date d'Expiration:</label>
+      <input id="expiry-date" type="text" [(ngModel)]="identity.dateExpiration" [readonly]="!canModify" />
     </div>
     <div class="info-item">
-      <label for="exp-date">Date d'Expiration:</label>
-      <input id="exp-date" type="date" [value]="identity.dateExpiration" [readonly]="!canModify" />
+      <label for="birthplace">Lieu de Naissance:</label>
+      <input id="birthplace" type="text" [(ngModel)]="identity.lieuNaissance" [readonly]="!canModify" />
     </div>
   </div>
 
-  <!-- Buttons -->
   <div class="buttons">
     <button (click)="validate()" class="validate-btn">
-      <i class="fas fa-check-circle"></i> Validate
+      <i class="fas fa-check-circle"></i> Valider
     </button>
     <button (click)="toggleModify()" class="modify-btn">
-      {{ canModify ? 'OK' : 'Modify' }}
+      {{ canModify ? 'OK' : 'Modifier' }}
     </button>
   </div>
 
-  <!-- Back Button -->
-  <button (click)="goBack()" class="back-btn">Back</button>
+  <button (click)="goBack()" class="back-btn">Retour</button>
 </div>
